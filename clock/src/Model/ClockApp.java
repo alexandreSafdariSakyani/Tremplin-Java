@@ -36,6 +36,7 @@ public class ClockApp
 		gl.setColumns(1);
 		gl.setRows(2);
 		chronoPanel.setLayout(gl);
+		
 		fenetre.getContentPane().add(clockPanel, BorderLayout.CENTER);
 		fenetre.getContentPane().add(chronoPanel, BorderLayout.EAST);
 		
@@ -100,6 +101,7 @@ public class ClockApp
 
 		fenetre.setSize(298,387);
 		fenetre.setResizable(false);
+		this.setImages();
 		fenetre.show();
 		clockThread=new ClockThread(this);
 		clockThread.start();
@@ -177,7 +179,11 @@ public class ClockApp
 		clockPanel.repaint();
 	}
 
-
+	public void setImages(){
+	   
+    ChronoPlus.setIcon(new ImageIcon(getClass().getResource("/image/chronometre.gif")));
+    rebourtPlus.setIcon(new ImageIcon(getClass().getResource("/image/timer.png")));     
+}
 
 	public static void main (String args[])
 	{    
