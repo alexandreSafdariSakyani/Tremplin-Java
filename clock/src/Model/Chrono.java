@@ -79,43 +79,7 @@ public class Chrono
 		Label1.setBorder(new EmptyBorder(10,135,10,10));
 		fenetre.getContentPane().add(Label1,"Center");
 		fenetre.getContentPane().add(Panel1,"South");
-		/* Action provoqué par l'utilisateur */
-		/* Lors du clic sur le bouton debut */
-//		debut.addActionListener(new ActionListener()
-//		{
-//			public void actionPerformed(ActionEvent e)
-//			{
-//				String texte;
-//				texte=debut.getText();
-//				if(texte.compareTo("Start")==0)
-//				{
-//					debut.setText("Stop ");
-//					timer1.start();
-//				}
-//				else if(texte.compareTo("Stop ")==0)
-//				{
-//					debut.setText("Start");
-//					timer1.stop();
-//				}
-//			}
-//		});
-//		/* Lors du clic sur le bouton fin */
-//		fin.addActionListener(new ActionListener()
-//		{
-//			public void actionPerformed(ActionEvent e)
-//			{
-//				String texte;
-//				texte=debut.getText();
-//				if(texte.compareTo("Start")==0)
-//				{
-//					heure=0;
-//					minute=0;
-//					seconde=0;
-//					debut.setText("Start");
-//					Label1.setText(heure+":"+minute+":"+seconde);
-//				}
-//			}
-//		});
+		
 		/* Afficher l'ihm */
 		fenetre.pack();
 		fenetre.setLocation(350,200); /* Déplacer la fenetre à ce nouvel emplacement */
