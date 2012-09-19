@@ -85,6 +85,52 @@ public class Chrono2
 		fenetre.setLocation(350,200); /* Déplacer la fenetre à ce nouvel emplacement */
 		fenetre.setSize(500,300); /* dimension de la fenetre */
 		fenetre.setVisible(false);
+		fenetre.addWindowListener(new WindowListener(){
+
+			@Override
+			public void windowActivated(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void windowClosed(WindowEvent e) {
+				// TODO Auto-generated method stub
+				setExiste(false);
+			}
+
+			@Override
+			public void windowClosing(WindowEvent e) {
+				// TODO Auto-generated method stub
+				setExiste(false);
+				
+			}
+
+			@Override
+			public void windowDeactivated(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void windowDeiconified(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void windowIconified(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void windowOpened(WindowEvent e) {
+				// TODO Auto-generated method stub
+				setExiste(true);
+				
+			}
+		});
 	}
 		public void start(){
 		timer1.start();
