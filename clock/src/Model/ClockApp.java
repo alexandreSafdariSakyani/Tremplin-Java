@@ -1,5 +1,6 @@
 package Model;
-
+//Doom Comment of the End of World !!!
+//commentaire 5003244
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.UIManager.LookAndFeelInfo;
