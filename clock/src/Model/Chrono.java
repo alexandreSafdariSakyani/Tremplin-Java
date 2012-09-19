@@ -11,7 +11,7 @@ import javax.swing.border.*;
 import java.awt.event.*;
 public class Chrono
 {
-	private int heure=0,minute=0,seconde=0, miliSeconds=0;
+	private int heure=00,minute=00,seconde=00, miliSeconds=00;
 	private boolean existe;
 	private JFrame fenetre;
 	public JButton split;
@@ -37,6 +37,9 @@ public class Chrono
 		split = new JButton("Diviser");
 		liste = new JList(getAbstractListModel());
 		liste.setFont(new Font("Century Gothic", Font.PLAIN, 14));
+		Label1.setFont(new Font("Century Gothic", Font.PLAIN, 30));
+		Label1.setHorizontalTextPosition(JLabel.CENTER);
+		Label1.setVerticalTextPosition(JLabel.CENTER);
 		fenetre = new JFrame("Chronomètre 1");
 		//setExiste(false);
 		fenetre.setVisible(true);
@@ -52,17 +55,17 @@ public class Chrono
 			{
 			miliSeconds++;
 			if(miliSeconds == 10){
-			    miliSeconds = 0;
+			    miliSeconds = 00;
 			    seconde++;
 			}
 			if(seconde==60)
 			{
-			seconde=0;
+			seconde=00;
 			minute++;
 			}
 			if(minute==60)
 			{
-			minute=0;
+			minute=00;
 			heure++;
 			}
 			Label1.setText(heure+":"+minute+":"+seconde+":"+miliSeconds);/* rafraichir le label */
@@ -119,7 +122,7 @@ public class Chrono
 		/* Afficher l'ihm */
 		fenetre.pack();
 		fenetre.setLocation(350,200); /* Déplacer la fenetre à ce nouvel emplacement */
-		fenetre.setSize(500,300); /* dimension de la fenetre */
+		fenetre.setSize(400,300); /* dimension de la fenetre */
 		fenetre.setVisible(false);
 	}
 		public void start(){
@@ -179,10 +182,10 @@ public class Chrono
 
 		public boolean resetAction(){
 		if(debut.getText().equals("Start")) {
-		    heure = 0;
-		    minute = 0;
-		    seconde = 0;
-		    miliSeconds = 0;
+		    heure = 00;
+		    minute = 00;
+		    seconde = 00;
+		    miliSeconds = 00;
 		        debut.setText("Start");
 		    splits[0] = "00:00:00.0";
 		    splits[1] = "00:00:00.0";
